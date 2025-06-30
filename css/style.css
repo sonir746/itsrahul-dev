@@ -23,19 +23,17 @@ body {
 .div1 {
   grid-area: 1 / 1 / 2 / 4;
   background: #1a0b2e;
-  position: sticky;
 }
 
 .div1 ul {
   display: flex;
-  margin: 10px 0;
-  padding:0;
-  width: 75%;
+  margin: 10px auto;
+  padding: 0;
+  width: 100%;
   justify-self: center;
   justify-content: space-evenly;
 }
 .div1 ul li {
-  
   font-weight: 600;
   font-size: 1.3rem;
   font-family: "Plus Jakarta Sans";
@@ -43,19 +41,17 @@ body {
   line-height: normal;
   cursor: pointer;
 }
-.div1 ul li a{
- color: #aaa0ff ;
+.div1 ul li a {
+  color: #aaa0ff;
   text-decoration: none;
 }
 .div1 ul li a:hover {
-color: #ffffff;
-text-decoration: underline;
+  color: #ffffff;
+  text-decoration: underline;
 }
 .div1 ul li.active {
-color: #ffffff;
+  color: #ffffff;
 }
-
-
 
 .div2 {
   grid-area: 2 / 2 / 3 / 3;
@@ -71,7 +67,7 @@ color: #ffffff;
 .div2 .my_nm p {
   position: relative;
   left: 5.5rem;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 600;
   font-family: "Preahvihear";
 }
@@ -83,7 +79,7 @@ color: #ffffff;
 /* Curved Arrow Styles */
 .arrow-container {
   position: relative;
-  top: -0.8rem;
+  top: -1rem;
   width: 120px;
   height: 70px;
   opacity: 0.6;
@@ -181,21 +177,21 @@ color: #ffffff;
 .div2 .dtl_ctnt {
   width: 90%;
   margin: auto;
+  margin-top: 3rem;
 }
 
 .div2 .about_me p {
- 
   font-family: "Preahvihear";
 }
 
-.div2 .about_me :is(p:nth-of-type(2),p:nth-of-type(3)) {
+.div2 .about_me :is(p:nth-of-type(2), p:nth-of-type(3)) {
   text-align: justify;
 }
 .div2 .about_me p:nth-of-type(1) {
-   text-align: left;
+  text-align: left;
   font-size: 2.5rem;
   font-weight: bold;
-  margin: 2rem auto 1rem auto;
+  margin: -1rem auto 1rem auto;
   padding: 0;
 }
 .div2 .about_me :is(p:nth-of-type(2), p:nth-of-type(3)) {
@@ -205,6 +201,7 @@ color: #ffffff;
 }
 
 .div2 .heading {
+  font-family: "Preahvihear";
   font-size: 2rem;
   font-weight: 600;
 }
@@ -303,7 +300,7 @@ color: #ffffff;
 .div2 .proj .proj_ctnt {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 5rem;
 }
 
 .div2 .proj .proj_ctnt .ctnt_div {
@@ -313,7 +310,6 @@ color: #ffffff;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   padding: 0;
-  margin-bottom: 3rem;
 }
 .div2 .proj .proj_ctnt .ctnt_div .heading_2 {
   grid-area: 1 / 1 / 2 / 2;
@@ -334,7 +330,8 @@ color: #ffffff;
   position: relative;
   left: 15%;
   margin: auto;
-  width: 90;
+  max-width: 90;
+  min-width: 300px;
   height: auto;
   line-height: normal;
   text-align: justify;
@@ -356,7 +353,6 @@ color: #ffffff;
   align-items: center;
   width: 90%;
   padding: 0;
-
   border-top: 1.5rem solid #2b0b3a;
   border-left: 2rem solid #2b0b3a;
   border-right: 0px;
@@ -366,11 +362,26 @@ color: #ffffff;
 
 .div2 .proj .proj_ctnt .overview img {
   object-fit: cover;
-  width: 100%;
+  max-width: 100%;
+  min-width: 320px;
+
   height: 100%;
   margin: 0;
   padding: 0;
   border-radius: 12px 0 0 0;
+}
+.div2 .proj .proj_ctnt .overview .gradient {
+  position: relative;
+  width: 100%;
+  height: 175%;
+  top: -155%;
+  left: -35%;
+  background: radial-gradient(
+    50% 50% at 50% 50%,
+    #763cac 0%,
+    rgba(50, 15, 133, 0) 100%
+  );
+  z-index: -1;
 }
 
 .div3 {
@@ -387,4 +398,32 @@ color: #ffffff;
 
 .div5 {
   grid-area: 3 / 1 / 4 / 4;
+  width: 100%;
+  height: 3rem;
+}
+
+@media (min-width: 480px) and (max-width: 768px) {
+  .div2 .my_nm{
+    margin-left: 4rem;
+  }
+  
+  .div2 .avtar_ctnt {
+    flex-direction: column;
+    align-items: start;
+    width: 90%;
+    margin: 0 auto;
+  }
+  .div2 .avtar_ctnt .avtar-div{
+    margin: 0 0 0 2rem;
+  }
+  .div2 .avtar_ctnt .ctnt{
+    align-self: start;
+    margin: 0;
+  }
+}
+
+.div2 .contact p img{
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
 }
