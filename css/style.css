@@ -1,5 +1,6 @@
 html {
   scroll-behavior: smooth;
+  background: white;
 }
 
 body {
@@ -58,10 +59,8 @@ body {
 }
 
 .div2 .my_nm {
-  position: relative;
   height: 20px;
-  margin: 4rem 0 0 0;
-  left: 10.5rem;
+  margin: 4rem 0 0 10.5rem;
 }
 
 .div2 .my_nm p {
