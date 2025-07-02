@@ -58,38 +58,57 @@ body {
   grid-area: 2 / 2 / 3 / 3;
 }
 
-.div2 .my_nm {
-  height: 20px;
-  margin: 4rem 0 0 10.5rem;
+.div2 .avtar_ctnt {
+  margin: 4rem 0 0 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 5.5fr;
+  grid-template-rows: auto auto;
+  align-items: center;
+  text-align: left;
+  font-family: "Preahvihear";
 }
 
-.div2 .my_nm p {
+.div2 .avtar_ctnt .my_nm {
   position: relative;
-  left: 5.5rem;
+  grid-area: 1 / 1 / 2 / 3;
+  height: 30px;
+  margin: 0 0 0 10.5rem;
+  padding: 0;
+  bottom: -30%;
+}
+
+.div2 .avtar_ctnt .my_nm p {
+  position: relative;
+  left: 4.2rem;
+
   font-size: 1rem;
   font-weight: 600;
   font-family: "Preahvihear";
 }
 
-.div2 .my_nm p > span {
+.div2 .avtar_ctnt .my_nm p > span {
+  margin: 0;
+  padding: 0;
   color: #7127ba;
 }
 
 /* Curved Arrow Styles */
 .arrow-container {
   position: relative;
-  top: -1rem;
+  top: -1.45rem;
   width: 120px;
-  height: 70px;
+  height: 100px;
   opacity: 0.6;
 }
 
 .curve-line {
-  width: 100%;
+  width: 90%;
   height: 100%;
   border: 1px solid white;
   border-color: white transparent transparent transparent;
-  border-radius: 50% 50% 50% 0;
+  border-radius: 100px 100px 0 0/70px 70px 0 0;
+
   transform: rotate(-35deg);
 }
 
@@ -97,46 +116,45 @@ body {
   position: relative;
   width: 10px;
   height: 10px;
+  border-radius: 200px 0 700px 0/700px 0 200px 0;
   border-left: 1px solid;
   border-bottom: 1px solid;
   border-color: #ffffff;
-  top: -56%;
-  left: 4.8%;
-  transform: rotate(-30deg);
-}
-
-.div2 .avtar_ctnt {
-  margin-top: 0;
-  display: flex;
-  gap: 1rem;
-  align-items: center;
-  text-align: left;
-  font-family: "Preahvihear";
+  top: -69%;
+  left: -3.28%;
+  transform: rotate(-27deg);
 }
 
 .div2 .avtar_ctnt .avtar-div {
+  grid-area: 2/1/3/2;
+
   display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 267.63px;
-  height: 300px;
-
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 300px;
+  height: 335.58px;
+  margin: 0;
+  padding: 0;
   background: radial-gradient(
     50% 50% at 50% 50%,
     #763cac 0%,
     rgba(50, 15, 133, 0) 100%
   );
 }
-.div2 .avtar_ctnt .avtar {
+.div2 .avtar_ctnt .avtar-div .avtar {
+  justify-self: center;
+
   height: 223px;
   width: 165x;
 }
 
 .div2 .avtar_ctnt .ctnt {
-  margin: 0 0 0 1rem;
+  grid-area: 2/2/3/3;
+  margin: 0 0 0 0.5rem;
   padding: 0;
-  width: 400px;
+  justify-self: start;
+  align-self: center;
+  max-width: 400px;
 }
 
 .div2 .avtar_ctnt .ctnt p {
@@ -144,6 +162,10 @@ body {
   padding: 0;
 }
 
+.div2 .avtar_ctnt .ctnt p:nth-of-type(1) {
+ text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.6);
+}
 .div2 .avtar_ctnt .ctnt p:nth-of-type(2) {
   font-size: 2.5rem;
 }
@@ -170,7 +192,7 @@ body {
 }
 
 .div2 .avtar_ctnt .ctnt p:nth-of-type(3) {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
 }
 
 .div2 .dtl_ctnt {
@@ -329,7 +351,7 @@ body {
   position: relative;
   left: 15%;
   margin: auto;
-  max-width: 90;
+  max-width: 40%;
   min-width: 300px;
   height: auto;
   line-height: normal;
@@ -350,7 +372,7 @@ body {
   grid-area: 1 / 2 / 3 / 3;
   justify-content: center;
   align-items: center;
-  width: 90%;
+  width: 40%;
   padding: 0;
   border-top: 1.5rem solid #2b0b3a;
   border-left: 2rem solid #2b0b3a;
@@ -401,28 +423,68 @@ body {
   height: 3rem;
 }
 
-@media (min-width: 480px) and (max-width: 768px) {
-  .div2 .my_nm{
-    margin-left: 4rem;
+@media (min-width: 320px) and (max-width: 1024px) {
+  .parent {
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 0;
   }
-  
+  .div2 {
+    width: 90%;
+    margin: auto;
+  }
   .div2 .avtar_ctnt {
-    flex-direction: column;
+    display: grid;
+    grid-template: repeat(3, auto) / auto;
     align-items: start;
     width: 90%;
     margin: 0 auto;
   }
-  .div2 .avtar_ctnt .avtar-div{
-    margin: 0 0 0 2rem;
+  .div2 .my_nm .arrow-container {
+    display: none;
   }
-  .div2 .avtar_ctnt .ctnt{
+  .div2 .avtar_ctnt .avtar-div {
+    grid-area: 1/1/2/2;
+    margin: 0 auto;
+    justify-self: center;
+    align-self: center;
+  }
+  .div2 .avtar_ctnt .my_nm {
+    grid-area: 2/1/3/2;
+    top: -10px;
+    width: 90%;
+    font-size: .5rem;
+    justify-self: center;
+    margin: 0 auto 50px auto;
+    padding: 0;
+  }
+
+  .div2 .avtar_ctnt .my_nm p{
+    font-size: 1.2rem;
+  }
+
+  .div2 .avtar_ctnt .ctnt {
+    grid-area: 3/1/4/2;
     align-self: start;
     margin: 0;
+    width: 100%;
   }
-}
+  .div2 .avtar_ctnt .ctnt p:nth-of-type(3) {
+    letter-spacing: 0.5px;
+    word-spacing: 0.5px;
+    line-height: 1.8;
+    font-size: 0.8rem;
+  }
 
-.div2 .contact p img{
-  width: 30px;
-  height: 30px;
-  color: #ffffff;
+  .div3 {
+    display: none;
+  }
+  .div4 {
+    display: none;
+  }
+  .div5 {
+    display: block;
+    width: 100%;
+  }
 }
