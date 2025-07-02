@@ -19,3 +19,8 @@ p {
   justify-self: center;
   align-self: center;
 }
+@media (min-width: 320px) and (max-width: 1024px) {
+  p{
+    font-size: 7vw;
+  }
+}
