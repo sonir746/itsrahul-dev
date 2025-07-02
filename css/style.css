@@ -508,7 +508,7 @@ body {
     border-radius: 10px;
   }
   .div2 .proj .proj_ctnt .ctnt_div .text p {
-    display: n;
+    display: block;
     justify-self: start;
     max-width: 100%;
     width: 100%;
