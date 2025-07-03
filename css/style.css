@@ -1,5 +1,5 @@
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: smooth; */
   background: white;
 }
 
@@ -49,13 +49,7 @@ body {
   color: #aaa0ff;
   text-decoration: none;
 }
-.div1 ul li a:hover {
-  color: #ffffff;
-  text-decoration: underline;
-}
-.div1 ul li.active {
-  color: #ffffff;
-}
+
 
 .div2 {
   grid-area: 2 / 2 / 3 / 3;
@@ -460,6 +454,12 @@ body {
   .div1 ul li .text{
   display: none;
 }
+/* .div1 ul li a:hover {
+  
+} */
+/* .div1 ul li.active {
+  
+} */
 
   .div2 {
     width: 100%;
