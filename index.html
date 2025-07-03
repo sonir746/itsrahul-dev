@@ -249,7 +249,16 @@
         </div>
     </section>
 
+<script>
+  const navItems = document.querySelectorAll(".div1 ul li");
 
+  navItems.forEach(item => {
+    item.addEventListener("click", () => {
+      document.querySelector(".div1 ul li.active")?.classList.remove("active");
+      item.classList.add("active");
+    });
+  });
+</script>
 </body>
 
 </html>
