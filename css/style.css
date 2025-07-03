@@ -321,7 +321,7 @@ body {
 .div2 .proj .proj_ctnt {
   display: flex;
   flex-direction: column;
-  gap: min(2rem,5rem);
+  gap: min(2rem, 5rem);
 }
 
 .div2 .proj .proj_ctnt .ctnt_div {
@@ -347,11 +347,11 @@ body {
   position: relative;
   justify-self: end;
   align-self: center;
-  line-height: normal;
+  line-height: 1.4;
   text-align: justify;
   padding: 1.5rem 2rem;
+  padding-right: 1.2rem;
   width: clamp(300px, 40%, 500px);
-  max-height: 30%;
   left: 10%;
   bottom: -1.5%;
   border-radius: 10px;
@@ -366,14 +366,23 @@ body {
 }
 
 .div2 .proj .proj_ctnt .ctnt_div .text p {
+  font-size: 0.9rem;
   margin: 0;
   padding: 0;
+  padding-right: 1.25rem;
   display: -webkit-box;
   -webkit-line-clamp: 3;
   line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+
+.div2 .proj .proj_ctnt .ctnt_div .text p:hover {
+  padding-right: 0.625rem;
+  overflow: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #7127ba #1a0b2e;
 }
 
 .div2 .proj .proj_ctnt .overview {
@@ -390,6 +399,7 @@ body {
 .div2 .proj .proj_ctnt .overview img {
   object-fit: cover;
   max-width: 100%;
+  width: 100%;
   height: 100%;
   margin: 0;
   padding: 0;
@@ -488,7 +498,7 @@ body {
     letter-spacing: 0.5px;
     word-spacing: 0.5px;
     line-height: 1.8;
-    font-size: 0.8rem;
+    font-size: min(2.61vw,0.8rem);
   }
   .div2 .exp .exp_ctnt > div {
     width: min(90%, 375px);
@@ -497,8 +507,8 @@ body {
     margin: auto;
   }
   .div2 .exp .exp_ctnt .ctnt p:nth-of-type(2) {
-    font-size: 0.6rem;
-    font-size: min(2vw, 0.6rem);
+    font-size: 0.7rem;
+    font-size: min(2.28vw,0.7rem);
   }
 
   .div2 .proj .heading {
@@ -510,12 +520,10 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    b
   }
   .div2 .proj .proj_ctnt .ctnt_div {
-    grid-template-columns: 100%;
+    grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
-
   }
 
   .div2 .proj .proj_ctnt .ctnt_div .heading_2 {
@@ -534,6 +542,13 @@ body {
     margin: auto;
     width: 52vw;
     padding: 1.2rem 0 0 1.2rem;
+    background: linear-gradient(
+      135deg,
+      rgba(39, 18, 66, 0.8),
+      rgba(39, 18, 66, 0.6),
+      rgba(39, 18, 66, 0.4),
+      rgba(39, 18, 66, 0.2)
+    );
   }
   .div2 .proj .proj_ctnt .overview img {
     width: 100%;
@@ -545,26 +560,42 @@ body {
     grid-area: 3/1/4/2;
     justify-self: center;
     align-self: center;
-    margin: auto;
-    width: 48vw;
-    padding: 1rem 0 0 0;
-    padding: 1.2rem;
-    left: 0%;
-  }
-  .div2 .proj .proj_ctnt .ctnt_div .text p {
-    justify-self: start;
-    align-self: center;
-    max-width: 100%;
-    width: 100%;
-    min-width: 100%;
     margin: 0 auto;
-    padding: 0;
+    width: 48vw;
+    padding: 1.2rem;
+    padding-right: 1.5rem;
+    height: auto;
     left: 0;
-    max-height: 100%;
-    background: none;
     bottom: 0;
+    max-height: none;
+
+    background: linear-gradient(
+      -45deg,
+      rgba(39, 18, 66, 0.8),
+      rgba(39, 18, 66, 0.6),
+      rgba(39, 18, 66, 0.4),
+      rgba(39, 18, 66, 0.2)
+    );
   }
 
+  .div2 .proj .proj_ctnt .ctnt_div .text p {
+    font-size: min(3.3vw, 1rem);
+    justify-self: start;
+    line-height: 1.5;
+    align-self: center;
+    width: 100%;
+    left: 0;
+    background: none;
+    bottom: 0;
+    margin: 0;
+    padding: 0;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;
+  }
+  .div2 .proj .proj_ctnt .ctnt_div .text .read-more {
+    display: inline-block;
+    position: relative;
+  }
   .div3 {
     display: none;
   }
