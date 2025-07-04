@@ -250,13 +250,18 @@
     </section>
 
 <script>
-  const navItems = document.querySelectorAll(".div1 ul li");
+  window.addEventListener("scroll", function () {
+    const div1 = document.querySelector(".div1");
+    const rect = div1.getBoundingClientRect();
+    const isScrolledPast = rect.bottom < 0.5;
 
-  navItems.forEach(item => {
-    item.addEventListener("click", () => {
-      document.querySelector(".div1 ul li.active")?.classList.remove("active");
-      item.classList.add("active");
-    });
+    if (window.innerWidth <= 1024) {
+      if (isScrolledPast) {
+        div1.classList.add("fixed-bottom");
+      } else {
+        div1.classList.remove("fixed-bottom");
+      }
+    }
   });
 </script>
 </body>

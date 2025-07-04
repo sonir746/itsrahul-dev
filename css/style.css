@@ -447,11 +447,23 @@ body {
     padding: 0;
   }
   .div1 {
-    margin-top: 1rem;
+    /* position: sticky; */
+    /* top: 0.5rem; */
+    margin: 1rem auto;
     width: 90%;
     justify-self: center;
     border-radius: 999px;
+    backdrop-filter: blur(30px);
+    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+    border: 2px solid rgba(255, 255, 255, 0.18);
+    z-index: 999;
   }
+
+  /* .div1 .fixed-bottom {
+    grid-area: 3/1/4/4;
+    position: fixed;
+    bottom: 0.5rem;
+  } */
 
   .div1 ul li .nav-icon {
     display: inline-block;
