@@ -19,12 +19,21 @@
 
 <body>
 
+    <div id="devNotice" class="notice">
+        <p> <strong>Currently in Dev Mode</strong>
+        <br />
+        Ongoing fine-tuning...
+        <br />
+        Feel free to take a look.</p>
+       
 
+
+    </div>
     <section class="parent">
-        <nav class="div1">
+        <nav id="nav" class="div1">
             <ul>
                 <li>
-                    <a href="/">
+                    <a href="#">
                         <span class="text">Home</span>
                         <span class="nav-icon">
                             <?xml version="1.0"?><svg class="home-icon" viewBox="0 0 576 512"
@@ -111,7 +120,7 @@
             </ul>
         </nav>
 
-        <div class="div2">
+        <div id="main" class="div2">
 
 
 
@@ -238,32 +247,18 @@
 
 
         </div>
-        <div class="div3">
+        <div id="l-side" class="div3">
 
         </div>
-        <div class="div4">
+        <div id="r-side" class="div4">
 
         </div>
-        <div class="div5">
+        <div id="Footer" class="div5">
 
         </div>
     </section>
 
-<script>
-  window.addEventListener("scroll", function () {
-    const div1 = document.querySelector(".div1");
-    const rect = div1.getBoundingClientRect();
-    const isScrolledPast = rect.bottom < 0.5;
-
-    if (window.innerWidth <= 1024) {
-      if (isScrolledPast) {
-        div1.classList.add("fixed-bottom");
-      } else {
-        div1.classList.remove("fixed-bottom");
-      }
-    }
-  });
-</script>
+    <script src="./index.js"></script>
 </body>
 
 </html>

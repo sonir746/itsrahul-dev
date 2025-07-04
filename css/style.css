@@ -1,13 +1,41 @@
 html {
-  /* scroll-behavior: smooth; */
   background: white;
 }
-
 body {
   margin: 0;
   padding: 0;
   background-color: #11071f;
 }
+.none {
+  display: none;
+}
+.notice {
+  position: fixed;
+  top: 40%;
+  width: 100%;
+  z-index: 9999;
+
+  font-family: "Inter", sans-serif;
+  display: none;
+}
+.notice p strong {
+  color: #e6e6fa;
+}
+.notice p {
+  color: #cccccc;
+  margin: auto;
+  font-size: 5rem;
+  text-align: center;
+  justify-self: center;
+  align-self: center;
+  width: 80%;
+  background: rgb(26, 11, 46, 0.3);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 16px;
+  padding: 0.8rem 1.5rem;
+}
+
 .parent {
   display: grid;
   grid-template-columns: 12.5% 1fr 12.5%;
@@ -23,7 +51,17 @@ body {
 
 .div1 {
   grid-area: 1 / 1 / 2 / 4;
-  background: #1a0b2e;
+  position: static;
+  top: 0.5rem;
+  margin: 1rem auto 0 auto;
+  width: 90%;
+  justify-self: center;
+  background: rgb(26, 11, 46, 0.8);
+  border-radius: 999px;
+  backdrop-filter: blur(30px);
+  box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  z-index: 999;
 }
 
 .div1 ul {
@@ -32,12 +70,18 @@ body {
   padding: 0;
   width: 100%;
   justify-self: center;
+  align-content: center;
+  align-self: center;
   justify-content: space-evenly;
 }
-.div1 ul li .nav-icon {
-  display: none;
-}
+
 .div1 ul li {
+  align-self: center;
+  align-content: center;
+  height: 35px;
+  width: 50px;
+  margin: 0;
+  padding: 0;
   font-weight: 600;
   font-size: 1.3rem;
   font-family: "Plus Jakarta Sans";
@@ -45,14 +89,59 @@ body {
   line-height: normal;
   cursor: pointer;
 }
+
 .div1 ul li a {
-  color: #aaa0ff;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  justify-self: center;
+  align-self: center;
+  align-items: center;
+  flex-grow: 1;
+  gap: 0;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  color: #1a0b2e;
   fill: #aaa0ff;
   text-decoration: none;
 }
-.div1 ul li a:hover {
-  color: #ffffff;
-  fill: white;
+
+.div1 ul li .nav-icon {
+  display: inline-block;
+  height: 100%;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  justify-self: center;
+  vertical-align: text-bottom;
+}
+
+.div1 ul li .text {
+  display: none;
+  background: #aaa0ff;
+  background: #ffffff;
+  width: 100%;
+  /* font-size: 45%; */
+  font-size: 0.7rem;
+  font-weight: bolder;
+  border-radius: 999px;
+  backdrop-filter: blur(30px);
+  text-align: center;
+  margin-top: 0;
+}
+
+.div1 ul li:hover a {
+  color: #1a0b2e;
+  fill: #ffffff;
+}
+
+.div1 ul li:hover .text {
+  display: block;
+}
+.div1 ul li:hover .nav-icon {
+  width: 60% !important;
 }
 
 .div2 {
@@ -440,30 +529,22 @@ body {
 }
 
 @media (min-width: 320px) and (max-width: 1024px) {
+  .notice p {
+    font-size: 6.5vw;
+  }
   .parent {
     grid-template-columns: 5% 90% 5%;
+    grid-template-rows: auto 1fr auto;
     width: 100%;
     margin: 0;
     padding: 0;
   }
-  .div1 {
-    /* position: sticky; */
-    /* top: 0.5rem; */
-    margin: 1rem auto;
-    width: 90%;
-    justify-self: center;
-    border-radius: 999px;
-    backdrop-filter: blur(30px);
-    box-shadow: 0px 0px 30px rgba(227, 228, 237, 0.37);
-    border: 2px solid rgba(255, 255, 255, 0.18);
-    z-index: 999;
-  }
 
-  /* .div1 .fixed-bottom {
+  .fixed-bottom {
     grid-area: 3/1/4/4;
-    position: fixed;
+    position: sticky;
     bottom: 0.5rem;
-  } */
+  }
 
   .div1 ul li .nav-icon {
     display: inline-block;
@@ -473,6 +554,7 @@ body {
     vertical-align: text-bottom;
   }
   .div1 ul li .text {
+    font-size: 45%;
     display: none;
   }
 
@@ -604,9 +686,9 @@ body {
 
   .div2 .proj .proj_ctnt .ctnt_div .text {
     grid-area: 3/1/4/2;
+    margin: 0 auto;
     justify-self: center;
     align-self: center;
-    margin: 0 auto;
     width: 48vw;
     padding: 1.2rem;
     padding-right: 1.5rem;
@@ -614,7 +696,6 @@ body {
     left: 0;
     bottom: 0;
     max-height: none;
-
     background: linear-gradient(
       -45deg,
       rgba(39, 18, 66, 0.8),
@@ -638,10 +719,7 @@ body {
     -webkit-line-clamp: 4;
     line-clamp: 4;
   }
-  .div2 .proj .proj_ctnt .ctnt_div .text .read-more {
-    display: inline-block;
-    position: relative;
-  }
+  
   .div3 {
     display: none;
   }
