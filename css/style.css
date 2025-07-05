@@ -143,7 +143,7 @@ body {
 }
 .div1 ul li:hover .nav-icon {
   transition:all 0.2s ease-in-out;
-  width: 68%;
+  width: 66%;
 }
 .div1 ul li:hover  .project-icon{
   width: 65%;
