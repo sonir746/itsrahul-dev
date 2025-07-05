@@ -26,8 +26,8 @@ window.addEventListener("scroll", () => {
     isScrollEnd = rect2.bottom < 620;
   }
 
-  console.log(rect2.bottom);
-  console.log(isScrollEnd);
+  // console.log(rect2.bottom);
+  // console.log(isScrollEnd);
   // Show div1 when scrolling starts
   div1.classList.remove("none");
 
@@ -42,8 +42,8 @@ window.addEventListener("scroll", () => {
         // Set a timeout to hide after 5 sec of inactivity
         isScrolling = setTimeout(() => {
           div1.classList.add("none");
-          console.log("Stopped scrolling");
-        }, 5000);
+          // console.log("Stopped scrolling");
+        }, 4000);
       }
     } else {
       div1.classList.remove("fixed-bottom");

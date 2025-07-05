@@ -120,7 +120,8 @@ body {
 
 .div1 ul li .text {
   display: none;
-  background: #aaa0ff;
+  color: rgb(26, 11, 46);
+  /* background: #aaa0ff; */
   background: #ffffff;
   width: 100%;
   /* font-size: 45%; */
@@ -141,7 +142,14 @@ body {
   display: block;
 }
 .div1 ul li:hover .nav-icon {
-  width: 60% !important;
+  transition:all 0.2s ease-in-out;
+  width: 68%;
+}
+.div1 ul li:hover  .project-icon{
+  width: 65%;
+}
+.div1 ul li:hover  .contact-icon{
+  width: 60%;
 }
 
 .div2 {
@@ -553,6 +561,12 @@ body {
     margin: 0;
     vertical-align: text-bottom;
   }
+  .div1 ul li:hover .nav-icon {
+  width: 60%;
+}.div1 ul li:hover   .contact-icon{
+  width: 55%;
+}
+ 
   .div1 ul li .text {
     font-size: 45%;
     display: none;
