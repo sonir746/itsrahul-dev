@@ -9,6 +9,20 @@ window.addEventListener("load", () => {
 
 let isScrolling;
 
+document.addEventListener("DOMContentLoaded", () => {
+  const navItems = document.querySelectorAll(".div1 ul li");
+
+  navItems.forEach((item) => {
+    item.addEventListener("click", (e) => {
+      console.log(e);
+      // Remove .active from all items
+      navItems.forEach((el) => el.classList.remove("active"));
+      // Add .active to the clicked item
+      item.classList.add("active");
+    });
+  });
+});
+
 window.addEventListener("scroll", () => {
   const div1 = document.querySelector(".div1");
   const div2 = document.querySelector(".div2");
@@ -19,14 +33,14 @@ window.addEventListener("scroll", () => {
   const rect2 = contact.getBoundingClientRect();
   const isScrolldown = rect.top < 0;
   let isScrollEnd = rect2.bottom < 1300;
-  if (window.innerWidth <= 700) {
+  if (window.innerWidth <= 768) {
     isScrollEnd = rect2.bottom < 950;
   }
   if (window.innerWidth <= 400) {
     isScrollEnd = rect2.bottom < 620;
   }
 
-  // console.log(rect2.bottom);
+  console.log(rect2.bottom);
   // console.log(isScrollEnd);
   // Show div1 when scrolling starts
   div1.classList.remove("none");

@@ -1,4 +1,5 @@
 html {
+  scroll-behavior: smooth;
   background: white;
 }
 body {
@@ -6,9 +7,7 @@ body {
   padding: 0;
   background-color: #11071f;
 }
-.none {
-  display: none;
-}
+
 .notice {
   position: fixed;
   top: 40%;
@@ -92,7 +91,7 @@ body {
 
 .div1 ul li a {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
   justify-content: center;
   justify-self: center;
   align-self: center;
@@ -108,23 +107,25 @@ body {
 }
 
 .div1 ul li .nav-icon {
+  order: 1;
   display: inline-block;
-  height: 100%;
-  width: 75%;
+  height: 90%;
+  width: 55%;
   margin: 0;
   padding: 0;
   align-self: center;
-  justify-self: center;
+  justify-self: end;
   vertical-align: text-bottom;
+  transition: transform 0.3s ease-in-out;
 }
 
 .div1 ul li .text {
   display: none;
   color: rgb(26, 11, 46);
-  /* background: #aaa0ff; */
+  order: 2;
   background: #ffffff;
   width: 100%;
-  /* font-size: 45%; */
+  justify-self: end !important;
   font-size: 0.7rem;
   font-weight: bolder;
   border-radius: 999px;
@@ -133,23 +134,29 @@ body {
   margin-top: 0;
 }
 
-.div1 ul li:hover a {
+.div1 li:hover a{
   color: #1a0b2e;
   fill: #ffffff;
 }
 
-.div1 ul li:hover .text {
+.div1 li:hover .text {
   display: block;
 }
-.div1 ul li:hover .nav-icon {
-  transition:all 0.2s ease-in-out;
-  width: 66%;
+
+.div1 li:hover .nav-icon{
+  transform: scale(0.80);
 }
-.div1 ul li:hover  .project-icon{
-  width: 65%;
-}
-.div1 ul li:hover  .contact-icon{
-  width: 60%;
+
+.div1 ul li.active a .nav-underline {
+  display: block;
+  order: 3;
+  align-self: center;
+  justify-self: end;
+  height: 3px;
+  width: 80%;
+  background: #aaa0ff;
+  border: #1a0b2e;
+  border-radius: 999px;
 }
 
 .div2 {
@@ -552,21 +559,27 @@ body {
     grid-area: 3/1/4/4;
     position: sticky;
     bottom: 0.5rem;
+    animation: transform 0.5s ease-in-out;
+  }
+  @keyframes transform {
+    0% {
+      transform: translateY(0.5rem);
+      opacity: 0.5;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   .div1 ul li .nav-icon {
     display: inline-block;
-    height: 32px;
-    width: 32px;
+    height: 30px;
+    width: 28px;
     margin: 0;
     vertical-align: text-bottom;
   }
-  .div1 ul li:hover .nav-icon {
-  width: 60%;
-}.div1 ul li:hover   .contact-icon{
-  width: 55%;
-}
- 
+
   .div1 ul li .text {
     font-size: 45%;
     display: none;
@@ -733,7 +746,7 @@ body {
     -webkit-line-clamp: 4;
     line-clamp: 4;
   }
-  
+
   .div3 {
     display: none;
   }
@@ -744,4 +757,13 @@ body {
     display: block;
     width: 100%;
   }
+}
+
+
+
+.none {
+  display: none;
+}
+.unnone {
+  display: none;
 }
