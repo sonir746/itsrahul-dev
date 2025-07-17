@@ -1,0 +1,24 @@
+.l-side {grid-area: lsidebar;}
+.main {grid-area: main;}
+.r-side {grid-area: rsidebar;}
+.footer {grid-area: footer;}
+
+@media (min-width: 320px) and (max-width: 1024px) {
+  .l-side {
+    display: none;
+  }
+  .r-side {
+    display: none;
+  }
+  .footer {
+    display: block;
+    width: 100%;
+  }
+}
+
+.unnone {
+  display: block;
+}
+.none {
+  display: none;
+}
