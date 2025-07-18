@@ -285,6 +285,10 @@
 }
 
 .main .home_proj .home_proj_ctnt .ctnt_div {
+
+  width: 90%;
+  justify-self: center;
+  align-self: center;
   display: grid;
   grid-template: 20% 80% / 1fr 1fr;
   grid-template-areas:
@@ -298,7 +302,8 @@
   grid-area: heading;
   align-items: center;
   height: auto;
-  margin-left: 5rem;
+  justify-self: end;
+  margin: 0 6rem 0 0;
 }
 .main .home_proj .home_proj_ctnt .ctnt_div .heading_2 p {
   margin: 0;
@@ -325,7 +330,7 @@
     rgba(39, 18, 66, 0.2)
   );
   backdrop-filter: blur(20px);
-  right: 5%;
+  margin-right: -5%;
   z-index: 3;
 
   border: 1px solid rgba(255, 255, 255, 0.05);
@@ -371,8 +376,8 @@
   );
   backdrop-filter: blur(20px);
   border-radius: 10px 0 0 0;
-  left: -15%;
   border: 1px solid rgba(255, 255, 255, 0.05);
+  margin-left: -5%;
 }
 
 .main .home_proj .home_proj_ctnt .overview img {
@@ -390,15 +395,15 @@
     "overview heading"
     "overview text";
 }
-.main .home_proj .r .heading_2 {
+.main .home_proj .home_proj_ctnt .r .heading_2 {
   align-items: center;
   justify-self: start;
-  margin-left: 5rem;
+  margin: 0 0 0 6rem;
 }
 .main .home_proj .home_proj_ctnt .r .text {
   justify-self: start;
   right: 0;
-  left: -25%;
+  margin-left: -5%;
   background: linear-gradient(
     to left,
     rgba(39, 18, 66, 0.8),
@@ -408,7 +413,7 @@
   );
   border-left: none;
 }
-.main .home_proj .r .overview {
+.main .home_proj .home_proj_ctnt .r .overview {
   justify-self: end;
   padding: 1rem 1rem 0 0;
   border-radius: 0 10px 0 0;
@@ -419,6 +424,8 @@
     rgba(39, 18, 66, 0.6),
     rgba(39, 18, 66, 0.4)
   );
+  left: 0;
+  margin-right: -5%;
 }
 .main .home_proj .r .overview img {
   border-radius: 0 12px 0 0 !important;
@@ -627,6 +634,20 @@
     padding: 0;
     -webkit-line-clamp: 4;
     line-clamp: 4;
+  }
+  .main .home_proj .home_proj_ctnt .r .overview {
+    margin: 0;
+    padding: 1.2rem 1.2rem 0.6rem 1.2rem;
+    border-radius: 12px 12px 0 0;
+    justify-self: center;
+    align-self: center;
+    background: linear-gradient(
+      180deg,
+      rgba(39, 18, 66, 0.8),
+      rgba(39, 18, 66, 0.6),
+      rgba(39, 18, 66, 0.4),
+      rgba(39, 18, 66, 0.2)
+    );
   }
 }
 
