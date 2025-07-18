@@ -8,25 +8,26 @@
   top: 0.5rem;
   margin: 1rem auto 0 auto;
   width: 90%;
+  height: auto;
   justify-self: center;
   background: rgb(26, 11, 46, 0.8);
   border-radius: 999px;
   backdrop-filter: blur(30px);
-  
   box-shadow: 0 0 30px rgba(127, 90, 240, 0.3), 0 0 40px rgba(127, 90, 240, 0.2);
-
   border: 2px solid rgba(255, 255, 255, 0.18);
   z-index: 999;
 }
 
 ul {
   display: flex;
-  margin: 10px auto;
+  /* margin: 10px auto; */
+  margin: clamp(6px,0.65vw,10px) auto;
   padding: 0;
   width: 100%;
   justify-self: center;
   align-content: center;
   align-self: center;
+  vertical-align: center;
   justify-content: space-evenly;
 }
 
@@ -34,7 +35,9 @@ ul {
   align-self: center;
   align-content: center;
   height: 35px;
+  height: clamp(33px,2.25vw,35px);
   width: 50px;
+  width: clamp(45px,3.25vw,50px);
   margin: 0;
   padding: 0;
   font-weight: 600;
@@ -65,8 +68,10 @@ ul {
 .div1 ul li .nav-icon {
   order: 1;
   display: inline-block;
-  height: 90%;
-  width: 55%;
+  /* height: 90%; */
+  height: clamp(29px,2.15vw,90%);
+  /* width: 55%; */
+  width: clamp(27px,1.8vw,55%);
   margin: 0;
   padding: 0;
   align-self: center;
@@ -82,7 +87,8 @@ ul {
   background: #ffffff;
   width: 100%;
   justify-self: end !important;
-  font-size: 0.7rem;
+
+  font-size: clamp(45%,0.72vw,0.7rem);
   font-weight: bolder;
   border-radius: 999px;
   backdrop-filter: blur(30px);
@@ -137,8 +143,8 @@ ul {
   }
   .div1 ul li .nav-icon {
     display: inline-block;
-    height: 30px;
-    width: 28px;
+    /* height: 30px;
+    width: 28px; */
     margin: 0;
     vertical-align: text-bottom;
   }

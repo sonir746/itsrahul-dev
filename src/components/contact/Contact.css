@@ -1,0 +1,14 @@
+
+.main .contact .icon {
+  margin: 0;
+  padding: 0;
+}
+.main .contact .mail-icon {
+  fill: white;
+  display: inline-block;
+  margin: 0px;
+  padding: 0px;
+  vertical-align: text-bottom;
+  height: 1.3em;
+  width: 1.3em;
+}

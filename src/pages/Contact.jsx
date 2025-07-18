@@ -1,6 +1,6 @@
 
 import Icons from "../components/home/Icons"
-
+import "../components/contact/Contact.css"
 
 const Contact = () => {
   return <div id="contact" class="contact dtl_ctnt">
