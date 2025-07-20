@@ -1,3 +1,3 @@
 # itsrahul-dev
 
-### Currently Live [Here](https://sonir746.github.io/itsrahul-dev/)
+### Currently Live [Here](https://itsrahul-dev.vercel.app/)
