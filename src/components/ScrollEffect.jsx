@@ -10,7 +10,7 @@ const ScrollEffect = () => {
       const rect = main.getBoundingClientRect();
       const rect2 = main.getBoundingClientRect();
       //   console.log(rect.top);
-      console.log(rect.bottom);
+      // console.log(rect.bottom);
       const isScrolldown = rect.top < 0;
 
       let isScrollEnd;
@@ -22,7 +22,7 @@ const ScrollEffect = () => {
       } else {
         isScrollEnd = rect2.bottom < 1200;
       }
-      console.log("Scroling");
+      // console.log("Scroling");
 
       header.classList.remove("none");
 
@@ -34,7 +34,7 @@ const ScrollEffect = () => {
           if (!isScrollEnd) {
             isScrolling = setTimeout(() => {
               header.classList.add("none");
-              console.log("Stopped scrolling");
+              // console.log("Stopped scrolling");
             }, 4000);
           }
         } else {

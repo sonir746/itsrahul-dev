@@ -7,8 +7,10 @@ import Contact from "./pages/Contact";
 import ScrollEffect from "./components/ScrollEffect";
 import Notice from "./components/Notice"
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+
   return (
     <Router>
       <ScrollEffect />

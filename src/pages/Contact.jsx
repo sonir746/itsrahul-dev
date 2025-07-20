@@ -1,9 +1,13 @@
-
-import Icons from "../components/home/Icons"
+import Icons from "../components/home/Icons";
+import Dev from "../components/Dev";
 
 
 const Contact = () => {
-  return <div id="contact" class="contact dtl_ctnt">
+  return (
+    <div class="main">
+
+    <Dev/>
+      {/* <div id="contact" class="contact dtl_ctnt">
         <p class="heading">Contact</p>
         <p>
           I'm currently looking to join a cross-functional team that values
@@ -14,6 +18,8 @@ const Contact = () => {
           <span class="icon">{Icons.mail}</span>
           rahulsoni7469@gmail.com
         </p>
-      </div>;
+      </div> */}
+    </div>
+  );
 };
 export default Contact;

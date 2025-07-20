@@ -2,12 +2,16 @@ import react from "react";
 
 export default function ProjDetails(props) {
   return (
-    <div class={"ctnt_div "+props.showclass}>
+    <div class={"ctnt_div " + props.showclass}>
       <div class="heading_2">
         <p>{props.name}</p>
       </div>
       <div class="text">
-        <p><span>{props.details}</span><br/><button>LEARN MORE</button></p>
+        <p>
+          <span>{props.details}</span>
+          <br />
+          <button>LEARN MORE</button>
+        </p>
       </div>
       <div class="overview">
         <img src={props.sampleimage} alt="" />
