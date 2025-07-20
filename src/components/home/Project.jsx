@@ -5,16 +5,18 @@ import ProjDetails from "./ProjDetails";
 
 const project = {
   p1: {
-    show:"",
+    show: "",
     name: "Drowsiness Detection",
-    image:proj1,
+    image: proj1,
+    link: "https://github.com/sonir746/Drowsiness_Detection_and_Alert_System.git",
     details:
       "A Python project that detects driver drowsiness using a custom-trained deep learning model on facial features. It monitors eye states in real-time from webcam input and triggers voice alerts if the eyes remain closed for over a second—helping prevent accidents. Built with OpenCV, PyTorch, and pyttsx3.",
   },
   p2: {
-    show:"r",
+    show: "r",
     name: "NoteKeeper",
-    image:proj2,
+    image: proj2,
+    link: "https://github.com/sonir746/NoteKeeper--React.js.git",
     details:
       "A sleek and responsive note-taking app built with React. It lets users create and delete notes through a clean, minimalist interface. Designed for simplicity, with Material UI icons and a smooth user experience—perfect for quick thoughts and to-dos.",
   },
@@ -25,15 +27,17 @@ export default function Project() {
       <p class="heading">Featured Projects</p>
       <div class="home_proj_ctnt">
         <ProjDetails
-        showclass={project.p1.show}
+          showclass={project.p1.show}
           sampleimage={project.p1.image}
           name={project.p1.name}
+          link={project.p1.link}
           details={project.p1.details}
         />
         <ProjDetails
           showclass={project.p2.show}
           sampleimage={project.p2.image}
           name={project.p2.name}
+          link={project.p2.link}
           details={project.p2.details}
         />
       </div>
