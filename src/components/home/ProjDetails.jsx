@@ -7,7 +7,7 @@ export default function ProjDetails(props) {
         <p>{props.name}</p>
       </div>
       <div class="text">
-        <p>{props.details}</p>
+        <p><span>{props.details}</span><br/><button>LEARN MORE</button></p>
       </div>
       <div class="overview">
         <img src={props.sampleimage} alt="" />

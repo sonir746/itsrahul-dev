@@ -13,7 +13,7 @@ const project = {
   },
   p2: {
     show:"r",
-    name: "Example Project",
+    name: "NoteKeeper",
     image:proj2,
     details:
       "A sleek and responsive note-taking app built with React. It lets users create and delete notes through a clean, minimalist interface. Designed for simplicity, with Material UI icons and a smooth user experience—perfect for quick thoughts and to-dos.",

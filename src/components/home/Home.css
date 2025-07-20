@@ -285,8 +285,7 @@
 }
 
 .main .home_proj .home_proj_ctnt .ctnt_div {
-
-  width: 90%;
+  width: 100%;
   justify-self: center;
   align-self: center;
   display: grid;
@@ -303,7 +302,7 @@
   align-items: center;
   height: auto;
   justify-self: end;
-  margin: 0 6rem 0 0;
+  margin: 0 20% 0 0;
 }
 .main .home_proj .home_proj_ctnt .ctnt_div .heading_2 p {
   margin: 0;
@@ -319,7 +318,9 @@
   text-align: justify;
   padding: 1.5rem 2rem;
   padding-right: 1.2rem;
-  width: clamp(300px, 40%, 500px);
+
+  width: clamp(250px, 65%, 500px);
+
   bottom: -1.5%;
   border-radius: 10px;
   background: linear-gradient(
@@ -332,7 +333,6 @@
   backdrop-filter: blur(20px);
   margin-right: -5%;
   z-index: 3;
-
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-right: none;
   padding: 1rem;
@@ -352,6 +352,34 @@
   text-overflow: ellipsis;
 }
 
+.main .home_proj .home_proj_ctnt .ctnt_div .text p button {
+  margin-top: 0.3rem;
+  padding: 0.3em 0.8em;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 500;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background: linear-gradient(
+    90deg,
+    rgba(127, 90, 240, 0.6),
+    rgba(180, 100, 255, 0.8)
+  );
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+.main .home_proj .home_proj_ctnt .ctnt_div .text p button:hover {
+  background: linear-gradient(
+    90deg,
+    rgba(200, 140, 255, 0.9),
+    rgba(127, 90, 240, 1)
+  );
+  transform: translateY(-2px);
+}
+
 .main .home_proj .home_proj_ctnt .ctnt_div .text p:hover {
   padding-right: 0.625rem;
   overflow: auto;
@@ -364,8 +392,10 @@
   position: relative;
   justify-self: start;
   align-self: center;
-  width: 70%;
-  height: 80%;
+  /* width: 60%; */
+  width: clamp(250px, 60%, 300px);
+  /* height: 90%; */
+  height: min(90%, 140px);
   padding: 1rem 0 0 1rem;
   background: linear-gradient(
     to right,
@@ -381,8 +411,7 @@
 }
 
 .main .home_proj .home_proj_ctnt .overview img {
-  object-fit: cover;
-  max-width: 100%;
+  object-fit: fill;
   width: 100%;
   height: 100%;
   margin: 0;
@@ -398,7 +427,7 @@
 .main .home_proj .home_proj_ctnt .r .heading_2 {
   align-items: center;
   justify-self: start;
-  margin: 0 0 0 6rem;
+  margin: 0 0 0 40%;
 }
 .main .home_proj .home_proj_ctnt .r .text {
   justify-self: start;
@@ -431,31 +460,25 @@
   border-radius: 0 12px 0 0 !important;
 }
 
+@media (max-width: 599px) {
+  .main .hero-buttons .btn {
+    margin: auto;
+    width: 80%;
+    letter-spacing: 3px;
+    font-weight: 800;
+  }
+}
 
-
-@media (min-width: 320px) and (max-width: 1024px) {
+@media (max-width: 767px) {
   .notice {
     top: 40vh;
   }
-  /* .notice p {
-    font-size: 6.5vw;
-  } */
-
   .main {
     width: 100%;
     margin: auto;
     font-size: 1rem;
     font-size: min(3.3vw, 1rem);
   }
-  /* .big_font {
-    font-size: min(8vw, 2.5rem);
-  }
-  .main .heading_2 {
-    font-size: min(4.88vw, 1.5rem);
-  }
-  .main .heading {
-    font-size: min(6vw, 2rem);
-  } */
 
   .main .avtar_ctnt {
     display: grid;
@@ -509,12 +532,7 @@
     line-height: 1.8;
     font-size: min(2.61vw, 0.8rem);
   }
-  .main .hero-buttons .btn {
-    margin: auto;
-    width: 80%;
-    letter-spacing: 3px;
-    font-weight: 800;
-  }
+
   .main .home_proj {
     margin-top: 1rem;
   }
@@ -554,7 +572,7 @@
     margin: 0 0 1rem 1rem;
   }
 
-  .main .home_proj .home_proj_ctnt .overview {
+  .main .home_proj .home_proj_ctnt .ctnt_div .overview {
     grid-area: overview;
     justify-self: center;
     align-self: center;
@@ -564,7 +582,7 @@
     right: 0;
     top: 0;
     bottom: 0;
-    width: 55vw;
+    width: min(55vw, 350px);
     padding: 1.2rem 1.2rem 0.6rem 1.2rem;
     background: linear-gradient(
       180deg,
@@ -590,7 +608,7 @@
     margin: 0 auto;
     justify-self: center;
     align-self: center;
-    width: 55vw;
+    width: min(55vw, 350px);
     padding: 0.6rem 1.2rem 1.2rem 1.2rem;
     /* padding-right: 1.5rem; */
     height: auto;
@@ -643,14 +661,16 @@
   }
 }
 
+
 .big_font {
   font-size: min(8vw, 2.5rem);
   font-weight: 500;
   line-height: 1.5;
 }
 .main .heading_2 {
-  font-size: min(4.88vw, 1.5rem);
+  font-size: clamp(1rem, 4.88vw, 1.25rem);
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 .main .heading {
   font-family: "Preahvihear";
