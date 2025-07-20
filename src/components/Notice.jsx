@@ -6,7 +6,7 @@ window.addEventListener("load", () => {
 
   setTimeout(() => {
     notice.style.display = "none";
-  }, 1000); // visible for 4 seconds
+  }, 4000); // visible for 4 seconds
 });
 
 
