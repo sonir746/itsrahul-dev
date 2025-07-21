@@ -1,44 +1,27 @@
 import React from "react";
-import proj1 from "../images/Drowsiness.png";
-import proj2 from "../images/NoteKeeper.png";
 import ProjDetails from "./ProjDetails";
+import ProjectData from "../common/ProjectData";
 
-const project = {
-  p1: {
-    show: "",
-    name: "Drowsiness Detection",
-    image: proj1,
-    link: "https://github.com/sonir746/Drowsiness_Detection_and_Alert_System.git",
-    details:
-      "A Python project that detects driver drowsiness using a custom-trained deep learning model on facial features. It monitors eye states in real-time from webcam input and triggers voice alerts if the eyes remain closed for over a second—helping prevent accidents. Built with OpenCV, PyTorch, and pyttsx3.",
-  },
-  p2: {
-    show: "r",
-    name: "NoteKeeper",
-    image: proj2,
-    link: "https://github.com/sonir746/NoteKeeper--React.js.git",
-    details:
-      "A sleek and responsive note-taking app built with React. It lets users create and delete notes through a clean, minimalist interface. Designed for simplicity, with Material UI icons and a smooth user experience—perfect for quick thoughts and to-dos.",
-  },
-};
 export default function Project() {
   return (
     <div class="home_proj dtl_ctnt">
       <p class="heading">Featured Projects</p>
       <div class="home_proj_ctnt">
         <ProjDetails
-          showclass={project.p1.show}
-          sampleimage={project.p1.image}
-          name={project.p1.name}
-          link={project.p1.link}
-          details={project.p1.details}
+          showclass={""}
+          sampleimage={ProjectData.p1.image}
+          name={ProjectData.p1.name}
+          git={ProjectData.p1.GitHub}
+          // live={ProjectData.p1.livelink}
+          details={ProjectData.p1.details}
         />
         <ProjDetails
-          showclass={project.p2.show}
-          sampleimage={project.p2.image}
-          name={project.p2.name}
-          link={project.p2.link}
-          details={project.p2.details}
+          showclass={"r"}
+          sampleimage={ProjectData.p2.image}
+          name={ProjectData.p2.name}
+          git={ProjectData.p2.GitHub}
+          // live={ProjectData.p2.livelink}
+          details={ProjectData.p2.details}
         />
       </div>
     </div>

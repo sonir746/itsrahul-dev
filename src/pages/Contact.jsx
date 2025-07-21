@@ -1,5 +1,5 @@
-import Icons from "../components/home/Icons";
-import Dev from "../components/Dev";
+import Icons from "../components/common/Icons";
+import Dev from "../components/common/Dev";
 
 
 const Contact = () => {

@@ -1,4 +1,4 @@
-import Dev from "../components/Dev";
+import Dev from "../components/common/Dev";
 import Experience from "../components/about/Experience";
 import "../components/about/about.css";
 const About = () => {

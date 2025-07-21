@@ -10,7 +10,7 @@ export default function ProjDetails(props) {
         <p>
           <span>{props.details}</span>
           <br />
-          <a href={props.link} target="_blank" rel="noopener noreferrer">
+          <a href={props.git} target="_blank" rel="noopener noreferrer">
             <button>LEARN MORE</button>
           </a>
         </p>

@@ -4,8 +4,8 @@ import Home from "./pages/Home";
 import About from "./pages/About";
 import Projects from "./pages/Projects";
 import Contact from "./pages/Contact";
-import ScrollEffect from "./components/ScrollEffect";
-import Notice from "./components/Notice"
+import ScrollEffect from "./components/common/ScrollEffect";
+import Notice from "./components/common/Notice"
 import "./App.css";
 import { useState } from "react";
 

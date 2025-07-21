@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useState } from "react";
 import "./Navbar.css";
 import List from "./List";
-import Icons from "../home/Icons";
+import Icons from "../common/Icons";
 
 
 export default function Navbar() {
@@ -10,12 +10,12 @@ export default function Navbar() {
   const [activeIndex, setActiveIndex] = useState(currentPath);
 
   const body = document.querySelector("body");
-  console.log(currentPath)
+  // console.log(currentPath)
 
 
   useEffect(() => {
 
-    if (activeIndex === "/") {
+    if (activeIndex === "/" || activeIndex === "/projects") {
       body.classList.remove("devbody");
     } else {
       body.classList.add("devbody");
