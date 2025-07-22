@@ -1,20 +1,21 @@
 import React, { useEffect } from "react";
-import { useState } from "react";
 import "./Navbar.css";
 import List from "./List";
 import Icons from "../common/Icons";
-import CurrentPath from "../common/CurrentPath";
-
-
+import { usePath } from "../common/PathContext";
 
 export default function Navbar() {
-  const [activeIndex, setActiveIndex, path] = CurrentPath();
+  const { activeIndex, setActiveIndex } = usePath();
+
   const body = document.querySelector("body");
   // console.log(path)
-  console.log(activeIndex)
+  console.log(activeIndex);
   useEffect(() => {
-
-    if (activeIndex === "/" || activeIndex === "/projects" || activeIndex === "/contact") {
+    if (
+      activeIndex === "/" ||
+      activeIndex === "/projects" ||
+      activeIndex === "/contact"
+    ) {
       body.classList.remove("devbody");
     } else {
       body.classList.add("devbody");

@@ -2,21 +2,21 @@
   max-width: 800px;
   margin: 0 auto;
   padding: 4rem 2rem;
-  color: #C8B8EB;
-  font-family: 'Segoe UI', sans-serif;
+  color: #c8b8eb;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .contact-header h2 {
   font-size: 2rem;
-  color: #E3DCF3;
+  color: #e3dcf3;
   margin-bottom: 0.5rem;
 }
 
 .contact-header p {
-  color: #B8B8BB;
+  color: #b8b8bb;
   margin-bottom: 2rem;
 }
-.succeededCtnt{
+.succeededCtnt {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,14 +25,14 @@
 .success-message {
   text-align: center;
   font-size: 1.2rem;
-  color: #A183D3;
+  color: #a183d3;
 }
 
-.goBackBtn{
+.goBackBtn {
   padding: 0.5rem 3rem;
-   margin-top: 1rem;
+  margin-top: 1rem;
   background: transparent;
-  color: #C8B8EB;
+  color: #c8b8eb;
   border: 1px solid #8357c0;
   border-radius: 8px;
   cursor: pointer;
@@ -40,24 +40,21 @@
   transition: all 0.3s ease;
 }
 .goBackBtn:hover {
-    background: #2a1c3f;
-   color: #E3DCF3;
+  background: #2a1c3f;
+  color: #e3dcf3;
   transform: scale(1.03);
 }
-
 
 .contact-form {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  /* background: rgba(35, 25, 50, 0.4); */
+  background: #11071f;
   backdrop-filter: blur(8px);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 0 20px rgba(127, 90, 240, 0.25);
-    box-shadow: 0 0 40px rgba(127, 90, 240, 0.3),
-    0 0 40px rgba(127, 90, 240, 0.2);
-    
+  box-shadow: 0 0 40px rgba(127, 90, 240, 0.3), 0 0 40px rgba(127, 90, 240, 0.2);
 }
 
 .input-group {
@@ -68,29 +65,38 @@
 
 .input-group input {
   flex: 1;
-  
 }
 
 .contact-form input,
 .contact-form textarea {
   padding: 0.75rem 1rem;
   border: 1px solid #3a2e4f;
-  background: #11071F;
   border-radius: 8px;
-  color: #E3DCF3;
+  color: #e3dcf3;
   outline: none;
   font-size: 1rem;
-  
+  background: transparent;
+}
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #85729e;
+}
+.contact-form input:-webkit-autofill {
+  background-color: #11071f !important;
+  color: #e3dcf3 !important;
+  transition: background-color 5000s ease-in-out 0s; /* Chrome hack */
+  -webkit-text-fill-color: #e3dcf3 !important;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #8357c0;
-  
+  backdrop-filter: brightness(1.5);
+  outline: none;
 }
 
 .send-btn {
-  background: linear-gradient(135deg, #5c398c, #8357c0);
+  background: linear-gradient(135deg, #5c398c, #361f55);
   color: #fff;
   padding: 0.8rem 1.5rem;
   border: none;
@@ -101,7 +107,7 @@
 }
 
 .send-btn:hover {
- 
-  background: linear-gradient(135deg, #8357c0, #5c398c);
+  background: linear-gradient(135deg, #361f55, #5c398c);
+
   transform: scale(1.03);
 }

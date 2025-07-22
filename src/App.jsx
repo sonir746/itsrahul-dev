@@ -7,11 +7,12 @@ import Contact from "./pages/Contact";
 import ScrollEffect from "./components/common/ScrollEffect";
 import Notice from "./components/common/Notice"
 import "./App.css";
-import { useState } from "react";
+import { PathProvider } from "./components/common/PathContext";
 
 function App() {
 
   return (
+    <PathProvider>
     <Router>
       <ScrollEffect />
       <Notice/>
@@ -27,6 +28,7 @@ function App() {
       <div className="r-side"></div>
       <div className="footer"></div>
     </Router>
+    </PathProvider>
   );
 }
 

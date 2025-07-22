@@ -129,7 +129,7 @@
 .projArea .projCards .ctnt_div .projButtens .git .gitBtn:hover,
 .projArea .projCards .ctnt_div .projButtens .link .linkBtn:hover {
   transform: scale(1.05);
-  filter: brightness(1.15);
+  backdrop-filter: brightness(1.15);
 }
 
 .projArea .projCards .ctnt_div .projButtens .git .gitBtn .gitIcon {
