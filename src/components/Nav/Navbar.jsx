@@ -3,19 +3,18 @@ import { useState } from "react";
 import "./Navbar.css";
 import List from "./List";
 import Icons from "../common/Icons";
+import CurrentPath from "../common/CurrentPath";
+
 
 
 export default function Navbar() {
-  const currentPath = window.location.pathname;
-  const [activeIndex, setActiveIndex] = useState(currentPath);
-
+  const [activeIndex, setActiveIndex, path] = CurrentPath();
   const body = document.querySelector("body");
-  // console.log(currentPath)
-
-
+  // console.log(path)
+  console.log(activeIndex)
   useEffect(() => {
 
-    if (activeIndex === "/" || activeIndex === "/projects") {
+    if (activeIndex === "/" || activeIndex === "/projects" || activeIndex === "/contact") {
       body.classList.remove("devbody");
     } else {
       body.classList.add("devbody");

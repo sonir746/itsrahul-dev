@@ -1,0 +1,33 @@
+<svg id="Apple" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 465.06 465.06">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="linear-gradient" x1="304.81" y1="-17.55" x2="160.25" y2="486.61" gradientTransform="translate(0 467.06) scale(1 -1)" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffdb73"/>
+      <stop offset=".08" stop-color="#fdad4e"/>
+      <stop offset=".15" stop-color="#fb832e"/>
+      <stop offset=".19" stop-color="#fa7321"/>
+      <stop offset=".23" stop-color="#f6692f"/>
+      <stop offset=".37" stop-color="#e84a5a"/>
+      <stop offset=".48" stop-color="#e03675"/>
+      <stop offset=".55" stop-color="#dd2f7f"/>
+      <stop offset=".68" stop-color="#b43d97"/>
+      <stop offset=".97" stop-color="#4d60d4"/>
+      <stop offset="1" stop-color="#4264db"/>
+    </linearGradient>
+
+    <!-- MASK (white = visible, black = hidden) -->
+    <mask id="cutout-mask">
+      <!-- White rectangle (everything visible by default) -->
+      <rect width="100%" height="100%" fill="white"/>
+      <!-- Black parts to be cut out (turn black areas transparent) -->
+      <path fill="black" d="M307.53,91.75c36.75.15,66.5,29.9,66.65,66.65v148.26c-.15,36.75-29.9,66.5-66.65,66.65h-150c-36.75-.15-66.5-29.9-66.65-66.65v-148.26c.15-36.75,29.9-66.5,66.65-66.65h150
+        M307.53,60.75h-150c-53.71,0-97.66,44-97.66,97.66v148.25c0,53.71,44,97.66,97.66,97.66h150c53.71,0,97.66-44,97.66-97.66v-148.26c0-53.71-43.95-97.66-97.66-97.66h0Z"/>
+      <path fill="black" d="M232.53,174.66c31.96,0,57.87,25.91,57.87,57.87s-25.91,57.87-57.87,57.87-57.87-25.91-57.87-57.87h0c.04-31.94,25.93-57.83,57.87-57.87
+        M232.53,143.66c-49.08,0-88.87,39.79-88.87,88.87s39.79,88.87,88.87,88.87 88.87-39.79,88.87-88.87h0c0-49.08-39.79-88.87-88.87-88.87Z"/>
+      <circle cx="323.34" cy="139.76" r="21.07" fill="black"/>
+    </mask>
+  </defs>
+
+  <!-- Apply mask to gradient rect -->
+  <rect width="465.06" height="465.06" rx="107.23" ry="107.23" fill="url(#linear-gradient)" mask="url(#cutout-mask)"/>
+</svg>

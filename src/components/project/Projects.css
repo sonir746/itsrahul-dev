@@ -12,7 +12,7 @@
   margin: 3rem 0;
 }
 .projArea .projCards {
-  width: clamp(300px, 85%, 350px);
+  width: clamp(275px, 85%, 350px);
   height: auto;
   box-shadow: 10px -10px 20px rgba(127, 90, 240, 0.3),
     0 0 40px rgba(127, 90, 240, 0.2);
