@@ -1,6 +1,6 @@
 import React from "react";
 import { useForm, ValidationError } from "@formspree/react";
-// import Icons from "../home/Icons";
+import Icons from "../common/Icons";
 
 export default function Contact() {
   const [state, handleSubmit] = useForm("manbqvno");
@@ -70,11 +70,6 @@ export default function Contact() {
           </button>
         </form>
       )}
-      <div>
-        <a href=""></a>
-        <a href=""></a>
-       
-      </div>
     </section>
   );
 }

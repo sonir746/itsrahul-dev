@@ -18,7 +18,7 @@ export default function ProjDetails(props) {
               rel="noopener noreferrer"
             >
               <button className="gitBtn">
-                <span className="gitIcon">{Icons.git}</span>LEARN MORE
+                <span className="gitIcon">{Icons.git}</span><span>LEARN MORE</span>
               </button>
             </a>
             <a

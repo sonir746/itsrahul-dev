@@ -1,13 +1,12 @@
-
 .projArea {
   width: 100%;
   display: flex;
   flex-direction: row;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   justify-self: center;
   justify-content: center;
   align-items: center;
-  column-gap: min(2rem,2.5rem);
+  column-gap: min(2rem, 2.5rem);
   row-gap: 2.5rem;
   margin: 3rem 0;
 }
@@ -81,7 +80,7 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.projArea .projCards  .ctnt_div:hover .projDetail{
+.projArea .projCards .ctnt_div:hover .projDetail {
   padding-right: 0.625rem;
   opacity: 1;
   overflow: auto;
@@ -121,15 +120,14 @@
 
   background: linear-gradient(135deg, #361f55, #5c398c);
   color: #e3dcf3;
-
   border: none;
   border-radius: 6px;
-  transition: 0.2s;
+  transition:all 0.3s ease;
 }
 .projArea .projCards .ctnt_div .projButtens .git .gitBtn:hover,
 .projArea .projCards .ctnt_div .projButtens .link .linkBtn:hover {
   transform: scale(1.05);
-  backdrop-filter: brightness(1.15);
+  background: linear-gradient(135deg, #472966, #6d44a8);
 }
 
 .projArea .projCards .ctnt_div .projButtens .git .gitBtn .gitIcon {
@@ -141,6 +139,7 @@
   width: 18px;
 }
 
+
 @media (min-width: 320px) and (max-width: 1024px) {
   .projArea {
     justify-content: center;
@@ -149,7 +148,7 @@
     row-gap: 2rem;
   }
   .projArea .projCards .ctnt_div .projButtens .git .gitBtn,
-.projArea .projCards .ctnt_div .projButtens .link .linkBtn {
-font-size: min(3.3vw,0.9rem);
-}
+  .projArea .projCards .ctnt_div .projButtens .link .linkBtn {
+    font-size: min(3vw, 0.9rem);
+  }
 }
