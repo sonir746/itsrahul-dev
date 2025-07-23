@@ -18,7 +18,7 @@ const ScrollEffect = () => {
       if (window.innerWidth <= 400) {
         isScrollEnd = rect2.bottom <= 700;
       } else if (window.innerWidth <= 768) {
-        isScrollEnd = rect2.bottom < 950;
+        isScrollEnd = rect2.bottom < 1000;
       } else {
         isScrollEnd = rect2.bottom < 1200;
       }
