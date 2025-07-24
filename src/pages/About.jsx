@@ -1,13 +1,12 @@
-import Dev from "../components/common/Dev";
-import Experience from "../components/about/Experience";
 import "../components/about/about.css";
+import Hero from "../components/about/Hero";
+import Dev from "../components/common/Dev"
 const About = () => {
-    return(
-        <div class="main">
-        <Dev/>
-            {/* <Experience /> */}
-        </div>
-        
-    )
+  return (
+    <div class="main">
+      <Dev />
+      {/* <Hero /> */}
+    </div>
+  );
 };
 export default About;

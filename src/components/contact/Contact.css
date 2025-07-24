@@ -1,7 +1,7 @@
 .contact-section {
   max-width: 800px;
   margin: 0 auto;
-  padding: 2rem min(1rem,2rem) 3rem min(1rem,2rem);
+  padding: 2rem min(1rem, 2rem) 3rem min(1rem, 2rem);
   color: #c8b8eb;
   font-family: "Segoe UI", sans-serif;
 }
@@ -84,7 +84,7 @@
 .contact-form input:-webkit-autofill {
   background-color: #11071f !important;
   color: #e3dcf3 !important;
-  transition: background-color 5000s ease-in-out 0s; 
+  transition: background-color 5000s ease-in-out 0s;
   -webkit-text-fill-color: #e3dcf3 !important;
 }
 
@@ -109,4 +109,26 @@
 .send-btn:hover {
   background: linear-gradient(135deg, #472966, #6d44a8);
   transform: scale(1.03);
+}
+
+.contactBtn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+.mail{
+  margin-bottom: -5px;
+}
+.contactIcon {
+  vertical-align: text-bottom;
+  width: 35px !important;
+  height: 30px !important;
+  fill: #5c398c;
+  color: #5c398c;
+}
+.contactIcon:hover {
+  transform: scale(1.25);
+  fill: #6d44a8;
+  color: #6d44a8;
 }
